@@ -2,7 +2,6 @@ class Board
 
   def initialize player
     @player = player
-    @board #....make board
   end
 
   def owner
@@ -24,7 +23,19 @@ class Board
   end
 
   def rows
-    @board
+    empty_string=["","","","","","","","","",""]
+    @board={1 => empty_string,
+            2 => empty_string,
+            3 => empty_string,
+            4 => empty_string,
+            5 => empty_string,
+            6 => empty_string,
+            7 => empty_string,
+            8 => empty_string,
+            9 => empty_string,
+            10 => empty_string}
+    @board.values
+
   end
 
   def opponent_view
@@ -32,7 +43,7 @@ class Board
   end
 
 end
-
+p Board.new("G").rows
 # board = [["s", "x", "o", "o", "", "s"], ["s", "s", "x", "o", "o", ""]];
 
 # board.map do |row|
