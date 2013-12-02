@@ -1,8 +1,12 @@
 class Board
 
-  def initialize name
-    @owner = name
+  def initialize player
+    @player = player
     @board #....make board
+  end
+
+  def owner
+    @player
   end
 
   def register_shot at_coordinates
@@ -19,4 +23,36 @@ class Board
     p "#{y} #{x}"
   end
 
+  def rows
+    @board
+  end
+
+  def opponent_view
+    @board.each_with_index {|row,index| row[index]="" if row[index]=="s" }
+  end
+
 end
+
+# board = [["s", "x", "o", "o", "", "s"], ["s", "s", "x", "o", "o", ""]];
+
+# board.map do |row|
+#   row.map! do |element|
+#     element="" if element=="s"
+#     element
+#   end
+# end
+
+# p board
+
+
+
+
+
+
+
+
+
+
+
+
+
