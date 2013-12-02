@@ -35,16 +35,7 @@ class Board
 
 end
 p Board.new("G").rows
-# board = [["s", "x", "o", "o", "", "s"], ["s", "s", "x", "o", "o", ""]];
 
-# board.map do |row|
-#   row.map! do |element|
-#     element="" if element=="s"
-#     element
-#   end
-# end
-
-# p board
 
 
 
