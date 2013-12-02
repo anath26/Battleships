@@ -8,6 +8,14 @@ class Board
     @player
   end
 
+  def generate_board
+    @board=Array.new(10).map! { Array.new(10,"") }
+  end
+
+  def content
+
+  end
+
   def register_shot at_coordinates
     @board
     letter,*number = at_coordinates.split('')
@@ -23,9 +31,6 @@ class Board
   end
 
   def rows
-    empty_string=["","","","","","","","","",""]
-    @board = []
-    10.times {|row| @board << empty_string}
     @board
   end
 
