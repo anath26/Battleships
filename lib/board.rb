@@ -24,18 +24,9 @@ class Board
 
   def rows
     empty_string=["","","","","","","","","",""]
-    @board={1 => empty_string,
-            2 => empty_string,
-            3 => empty_string,
-            4 => empty_string,
-            5 => empty_string,
-            6 => empty_string,
-            7 => empty_string,
-            8 => empty_string,
-            9 => empty_string,
-            10 => empty_string}
-    @board.values
-
+    @board = []
+    10.times {|row| @board << empty_string}
+    @board
   end
 
   def opponent_view
