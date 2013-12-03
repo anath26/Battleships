@@ -9,7 +9,7 @@ class Board
   end
 
   def generate_board
-    @board=Array.new(10).map! { Array.new(10,"") }
+    @board=Array.new(10).map! { Array.new(10,"=") }
   end
 
   def register_shot at_coordinates
